@@ -14,28 +14,34 @@ This is the client application for project 1 for CSCI 455
 
 # Files needed to run the Server and Client
 
-# How to start the server
-In order to run the server you need to open the command line or powershell and navigate to the directory of where the file is located.
-Once you do that you can start the program by typing this command `java -jar Server.jar`
+# How to start the client
+In order to run the client application you need to open the command line or powershell and navigate to the directory of where the file is located.
+Once you do that you can start the program by typing this command `java -jar Client.jar`
 
 Once you do that you this should pop up
 ```text
-Opening Socket
-Socket is open
-```
-Seeing this means that the server is now running and waiting for users to connect.
-
-# How to start the client
-The way to start the client is the same as the server except you'll get a different screen when it starts.
-This is what you should get when you start the client application.
-```text
 What do you want to do?
-1. Connect to GoFundMe
+1. Connect to a website
 2. Exit
 ```
+
 Once you get this you can type 1 or connect to connect to the server or you can type 2 or exit to close the program.
 
 If you decide to connect you be greated with this screen.
+```text
+Where do you want to connect to? Type the ip address
+Your input should look like "0-255.0-255.0-255.0-255"
+You can exit if you want
+```
+At this screen you are susposed to type in the IP address of the server you want to connect to. Or if you decide you don't want to connect anymore you can type exit to close the program.
+
+Once you type a valid IP address you will then be asked to enter the port number of the server
+```text
+What is the port number of the server? Your input should be between 0-65535
+You can exit if you want
+```
+Once you type a valid port number you'll the application will try to connect and if all goes well you'll connect to the server and be greet with this screen
+
 ```text
 You are connected!
 
