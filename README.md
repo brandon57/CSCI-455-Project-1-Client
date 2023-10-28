@@ -67,7 +67,7 @@ input: past
 Result:
 ---------------------------------------------------------------------------------
 Here are past funderaisers:
-1. Wedding | raised: $0 | goal: $10000 | ended: 11/20/2022 |
+1. John's Wedding | raised: $0 | goal: $10000 | ended: 11/20/2022 |
 ---------------------------------------------------------------------------------
 These are the options you have to chose from
 1. See current funderaisers
