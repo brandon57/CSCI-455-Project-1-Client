@@ -43,92 +43,8 @@ public class ClientSide {
 					System.out.println("Your input is not valid\nTry again");
 					break;
 			}
-			
-//			if(response.equals("1") || response.equalsIgnoreCase("connect"))
-//			{
-//				break;
-//			}
-//			else if(response.equals("2") || response.equalsIgnoreCase("Exit"))
-//			{
-//				input.close();
-//				close();
-//			}
-//			else
-//			{
-//				System.out.println("Your input is not valid\nWant to try again?\n1. Yes\n2. No");
-//				response = input.nextLine();
-//				while(true)
-//				{
-//					if(response.equals("1") || response.equalsIgnoreCase("yes"))
-//					{
-//						System.out.println("What do you want to do?\n1. Connect to a website\n2. Exit");
-//						break;
-//					}
-//					else if(response.equals("2") || response.equalsIgnoreCase("no"))
-//					{
-//						input.close();
-//						close();
-//					}
-//					else
-//					{
-//						System.out.println("Not a valid option\nYou want to try again?\n1. Yes\n2. No");
-//						response = input.nextLine();
-//					}
-//				}
-//			}
 		}
-		
-		//Opens socket
-//		while(true)
-//		{
-//			try
-//			{
-//				client = new Socket("localhost", 6789);
-//				
-//				break;
-//				//client.close();
-//			}
-//			catch(Exception e)
-//			{
-//				System.out.println("Couldn't connect\nWant to try again?\n1. Yes\n2. No");
-//				while(true)
-//				{
-//					response = input.nextLine();
-//					if(response.equals("1") || response.equalsIgnoreCase("yes"))
-//					{
-//						break;
-//					}
-//					else if(response.equals("2") || response.equalsIgnoreCase("no"))
-//					{
-//						input.close();
-//						close();
-//					}
-//					else
-//					{
-//						System.out.println("Your input is not valid\nWant to try again?\n1. Yes\n2. No");
-//						response = input.nextLine();
-//						while(true)
-//						{
-//							if(response.equals("1") || response.equalsIgnoreCase("yes"))
-//							{
-//								System.out.println("Want to try and connect again?\n1. Yes\n2. No");
-//								break;
-//							}
-//							else if(response.equals("2") || response.equalsIgnoreCase("no"))
-//							{
-//								input.close();
-//								close();
-//							}
-//							else
-//							{
-//								System.out.println("Not a valid option\nYou want to try again?\n1. Yes\n2. No");
-//								response = input.nextLine();
-//							}
-//						}
-//					}
-//				}
-//			}
-//		}
+
 		fromServer = new BufferedReader(new InputStreamReader(client.getInputStream()));
 		toServer = new DataOutputStream(client.getOutputStream());
 		
@@ -200,9 +116,30 @@ public class ClientSide {
 				System.out.println("That port number is not valid");
 			}
 		}
-		client = new Socket(IP, Integer.valueOf(port));
+		//Tries connecting to IP multiple time before stoping
+		for(int i = 0; i < 4; i++)
+		{
+			try
+			{
+				client = new Socket(IP, Integer.valueOf(port));
+				return;
+			}
+			catch(Exception e)
+			{
+				if(i != 3)
+				{
+					System.out.println("Couldn't connect to the IP address: " + IP + "With port number: " + port + "\nTrying again");
+				}
+				else
+				{
+					System.out.println("Couldn't connect to the IP address: " + IP + "With port number: " + port);
+					close();
+				}
+			}
+		}
 	}
 	
+	//Checks if the port number the user
 	private static boolean validPort(String port)
 	{
 		Integer temp = 0;
