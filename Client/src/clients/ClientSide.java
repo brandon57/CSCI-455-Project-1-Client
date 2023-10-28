@@ -15,14 +15,8 @@ public class ClientSide {
 		String textFromServer = "";
 		//Socket client = null;
 		String response = "";
-
 		boolean valid_input = false;
-		
-		
-		//System.out.println("What do you want to do?\n1. Connect a website\n2. Exit");
-		
-		//InetAddress
-		
+
 		//Asks the user if they want to connect or not
 		while(valid_input == false)
 		{
@@ -128,11 +122,11 @@ public class ClientSide {
 			{
 				if(i != 3)
 				{
-					System.out.println("Couldn't connect to the IP address: " + IP + "With port number: " + port + "\nTrying again");
+					System.out.println("Couldn't connect to the IP address: " + IP + " With port number: " + port + "\nTrying again");
 				}
 				else
 				{
-					System.out.println("Couldn't connect to the IP address: " + IP + "With port number: " + port);
+					System.out.println("Couldn't connect to the IP address: " + IP + " With port number: " + port);
 					close();
 				}
 			}
