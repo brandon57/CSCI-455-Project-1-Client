@@ -27,18 +27,19 @@ What do you want to do?
 
 Once you get this you can type 1 or connect to connect to the server or you can type 2 or exit to close the program.
 
-If you decide to connect you be greated with this screen.
+If you decide to connect you will be greated with this screen.
 ```text
-Where do you want to connect to? Type the ip address
-Your input should look like "0-255.0-255.0-255.0-255"
-You can exit if you want
+Now type the IP address of where you want to connect.
+Your input should look like this "0-255.0-255.0-255.0-255".
+If your running the server off of the same computer you can type "localhost" instead.
+Typing "exit" will close the program.
 ```
 At this screen you are susposed to type in the IP address of the server you want to connect to. Or if you decide you don't want to connect anymore you can type exit to close the program.
 
 Once you type a valid IP address you will then be asked to enter the port number of the server
 ```text
 What is the port number of the server? Your input should be between 0-65535
-You can exit if you want
+Typing "exit" will close the program.
 ```
 Once you type a valid port number you'll the application will try to connect and if all goes well you'll connect to the server and be greet with this screen
 
