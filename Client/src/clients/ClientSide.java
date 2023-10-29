@@ -78,7 +78,11 @@ public class ClientSide {
 		String port = null;
 		while(true)
 		{
-			System.out.println("Where do you want to connect to? Type the ip address\nYour input should look like \"0-255.0-255.0-255.0-255\"\nYou can exit if you want");
+			//System.out.println("Great! Type the IP address of where you want to connect");
+			System.out.println("Now type the IP address of where you want to connect.\n"
+					+ "Your input should look like this \"0-255.0-255.0-255.0-255\".\n"
+					+ "If your running the server off of the same computer you can type \"localhost\" instead.\n"
+					+ "Typing \"exit\" will close the program.");
 			IP = input.nextLine();
 			if(validIP(IP) == true)
 			{
@@ -95,7 +99,8 @@ public class ClientSide {
 		}
 		while(true)
 		{
-			System.out.println("What is the port number of the server? Your input should be between 0-65535\nYou can exit if you want");
+			System.out.println("What is the port number of the server? Your input should be between 0-65535\n"
+					+ "Typing \"exit\" will close the program.");
 			port = input.nextLine();
 			if(validPort(port) == true)
 			{
@@ -133,7 +138,7 @@ public class ClientSide {
 		}
 	}
 	
-	//Checks if the port number the user
+	//Checks if the port number the user inputted is valid
 	private static boolean validPort(String port)
 	{
 		Integer temp = 0;
@@ -154,6 +159,10 @@ public class ClientSide {
 	
 	private static boolean validIP(String IP)
 	{
+		if(IP.equalsIgnoreCase("localhost"))
+		{
+			IP = "127.0.01";
+		}
 		String pattern = "(\\d{1,2}|(0|1)\\d{2}|2[0-4]\\d|25[0-5])";
 		String IP_pattern = pattern + "." + pattern + "." + pattern + "." + pattern;
 		Pattern temp = Pattern.compile(IP_pattern);
