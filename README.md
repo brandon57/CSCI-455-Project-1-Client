@@ -18,7 +18,7 @@ Note: In order to run this you need Java JDK version 17 or newer
 In order to run the client application you need to open the command line or powershell and navigate to the directory of where the file is located.
 Once you do that you can start the program by typing this command `java -jar Client.jar`
 
-Once you do that you this should pop up
+Once you do that should be greeted with a screen asking you what you want to do.
 ```text
 What do you want to do?
 1. Connect to a website
