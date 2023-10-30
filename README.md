@@ -14,8 +14,6 @@ Note: In order to run this you need Java JDK version 17 or newer
   <img src="Documents/project1_2023_Fall_pg2.png" width="688" />
 </p>
 
-# Files needed to run the Server and Client
-
 # How to start the client
 In order to run the client application you need to open the command line or powershell and navigate to the directory of where the file is located.
 Once you do that you can start the program by typing this command `java -jar Client.jar`
