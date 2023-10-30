@@ -3,6 +3,8 @@ This is the client application for project 1 for CSCI 455
 
 If you are looking for the server application the github repository for it is here [Server application](https://github.com/brandon57/CSCI-455-Project-1-Server)
 
+Note: In order to run this you need Java JDK version 17 or newer
+
 # These are the requirements for the project
 <p align="center">
   <img src="Documents/project1_2023_Fall_pg1.png" width="688" />
